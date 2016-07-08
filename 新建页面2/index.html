@@ -14,6 +14,11 @@
     
     
     
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="AuB" />
+    <meta name="twitter:title" content="新建页面2 | Where Amazing Happens Here!!" />
+      
+    
     
     <link rel="alternate" href="netteJin.com" title="Where Amazing Happens Here!!" type="application/atom+xml">
     
@@ -80,7 +85,7 @@
   </h1>
   <p class="article-author">By
     
-      <a href="https://nettiejin.github.io.com" title="NettieJin">NettieJin</a>
+      <a href="https://plus.google.com/116338260303228780000?rel=author" title="NettieJin" target="_blank" itemprop="author">NettieJin</a>
     </p>
   <p class="article-time">
     <time datetime="2016-07-08T04:25:54.000Z" itemprop="datePublished">2016-07-08</time>
@@ -101,7 +106,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="https://nettiejin.github.io.com/新建页面2/index.html" data-title="新建页面2 | Where Amazing Happens Here!!" data-tsina="null" class="share clearfix">
+  <div data-url="https://nettiejin.github.io.com/新建页面2/index.html" data-title="新建页面2 | Where Amazing Happens Here!!" data-tsina="AuB" class="share clearfix">
   </div>
 
 </div>
@@ -126,6 +131,10 @@
 	 
 	<div class="social-font" class="clearfix">
 		
+		<a href="http://weibo.com/AuB" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/AuB" target="_blank" title="twitter"></a>
 		
 		
 		<a href="https://github.com/netteJin" target="_blank" title="github"></a>
@@ -219,10 +228,27 @@ $(document).ready(function(){
 
 
 
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
 
-<link rel="stylesheet" href="/fotorama/fotorama.css" media="screen" type="text/css">
-<script src="/fotorama/fotorama.js"></script>
-page
 
 
 
